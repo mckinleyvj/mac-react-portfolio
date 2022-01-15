@@ -98,10 +98,16 @@ export default function Main({ userdetails, public_images, public_docs, image_ex
                                     </figure>
                                 ))}
                             </aside>
-                            {/* {userdetails.prev_jobs.map((prevJ) => 
+                            {userdetails.prev_jobs.map((prevJ) => 
                                 (
-                                    
-                                )} */}
+                                    <aside id="work-content-container" className="work-content-container" key={prevJ.job}>
+                                        <figure>
+                                            <figcaption id="#fig-glow">{prevJ.job}</figcaption>
+                                            <img src={prevJ + prevJ.job + image_ext.toLowerCase()} alt={prevJ.job}/>
+                                            <div className="fig-table"><span className="fig-desc">{prevJ.desc}</span></div>
+                                        </figure>
+                                    </aside>
+                                 ))}
                             {/* <h2>Systems Analyst - Previous Overseas Employment</h2>
                             <aside id="work-content-container" className="work-content-container">
                                 <figure>

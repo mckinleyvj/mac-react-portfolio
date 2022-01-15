@@ -12,7 +12,7 @@ import userdetails from './userdetails';
 const public_images = process.env.PUBLIC_URL + `/images/`;
 const public_docs = process.env.PUBLIC_URL + `/docs/`;
 
-const image_ext = ".png" || ".PNG" || ".Png";
+const image_ext = ".png" || ".PNG" || ".Png" || ".jpg" || ".jpeg" || ".JPG" || ".JPEG";
 
 function App() {
   return (

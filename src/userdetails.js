@@ -33,7 +33,7 @@ const userdetails = {
         },
         {
             "date":"2021",
-            "job":"Business Analyst/Web Developer",
+            "job":"Technical Business Analyst and Web Developer",
             "desc":"Currently working as a Technical Business Analyst for APM EmployableMe. Running tasks of creating user stories and grooming Acceptance Criterias, daily standups, stakeholder meetings, requirements analysis, scrum planning and testing. Also I am the first point of contact for customer service centre's technical issues for end-users."
         },
     ],
