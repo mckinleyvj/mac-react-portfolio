@@ -59,9 +59,9 @@ MEDIA QUERIES
 	.work-content-container figcaption {
 		font-size: calc(17px - 0.3vw);
 	}
-	.work-content-container figure {
-		width: 30%;
-	}
+	/* .work-content-container figure {
+		width: 20%;
+	} */
 	.work-content-inner {
 		width: 100%;
 	}
@@ -92,6 +92,9 @@ MEDIA QUERIES
 @media screen and (max-width: 1280px) {
 	.home-content-3 {
 		margin-left: 25px;
+	}
+	.work-content-container figure {
+		width: 35%;
 	}
 }
 /*--------Media of 1024px x 768px----------*/
@@ -161,7 +164,7 @@ MEDIA QUERIES
 		font-size: calc(15px - 0.3vw);
 	}
 	.work-content-container figure {
-		width: 45%;
+		width: 40%;
 	}
 	.fig-desc {
 		font-size: calc(15px - 0.3vw);

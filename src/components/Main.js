@@ -7,6 +7,8 @@ import moment from 'moment';
 import githubapi from '../utils/API';
 
 const public_images = process.env.PUBLIC_URL + `images/`;
+const public_docs = process.env.PUBLIC_URL + `docs/`;
+
 const image_ext = ".png";
 
 export default function Main({ userdetails }) {
@@ -82,27 +84,26 @@ export default function Main({ userdetails }) {
                         <article className="work-content-inner">
                             <h2>Portfolio</h2>
                             <aside id="work-content-container" className="work-content-container">
-                            {results.map((repos) => {
-                                const date_updtd = moment.parseZone(repos.updated_at,"YYYY-MM-DDTHH:mm:ss[Z]").format("dddd, DD-MM-YYYY, HH:mm:ss");
+                            {results.map((repos) => 
                                 (
                             <figure key={repos.id}>
                             <a href={repos.html_url} className="fig-container" >
-                            <figcaption id="#fig-glow">Repository: {repos.name}</figcaption>
+                            <figcaption id="#fig-glow">REPOSITORY: {repos.name.toUpperCase()}</figcaption>
                             <img src={public_images + repos.name + image_ext} alt={repos.name}/>
                             <div className="flex-fig-table">
                             <div className="fig-table">
                             <span className="fig-desc">Description:<br/>
                             {repos.description}</span>
                             <span className="fig-desc">Language: {repos.language}</span>
-                            <span className="fig-desc">Last update: {repos.date_updtd}</span>
+                            {/* <span className="fig-desc">Last update: {repos.date_updtd}</span> */}
                             {/* <span className="fig-desc">Live URL: <a href="https://{repos.owner.login}.github.io/{repos.name}" className="fig-desc" target="_blank">https://{repos.owner.login}.github.io/{repos.name}</a></span> */}
                             </div>
                             </div>
                             </a>
                             </figure>
-                            )})}
+                            ))}
                             </aside>
-                            <h2>Systems Analyst - Previous Overseas Employment</h2>
+                            {/* <h2>Systems Analyst - Previous Overseas Employment</h2>
                             <aside id="work-content-container" className="work-content-container">
                                 <figure>
                                     <figcaption id="#fig-glow">Server/Desktop Repairs</figcaption>
@@ -139,7 +140,7 @@ export default function Main({ userdetails }) {
                                     <img src="./assets/images/Work6.jpeg" alt="Typical Work Day 6"/>
                                     <div className="fig-table"><span className="fig-desc">IT Support: Visual Foxpro, Visual Basic, HTML, CSS, ASP.Net, VBScript, XML, SQL</span></div>
                                 </figure> 
-                            </aside>
+                            </aside> */}
                             <div className="work-content-footer"><span>*Images are copyright and have been originally taken throughout my career.</span></div>
                                 <div className="next"><a href="#contact-me">&gt; Get in touch &gt;</a>
                                 </div>
@@ -150,8 +151,8 @@ export default function Main({ userdetails }) {
                                 <aside>
                                     <h3>Contact Details:</h3>
                                     <p>Phone: +61-416781287</p>
-                                    <p>Email: <a href="mailto:mckinleyvj@gmail.com" className="download-resume">mckinleyvj@gmail.com</a></p>
-                                    <i className="fa fa-file-text"><a href="./assets/docs/Resume-MckinleyJimenez.pdf" className="download-resume" download>Download my Resume</a></i>
+                                    <p>Email: <a href={'mailto:' + userdetails.email} className="download-resume">{userdetails.email}</a></p>
+                                    <i className="fa fa-file-text"><a href={public_docs + '/Resume-MckinleyJimenez.pdf'} className="download-resume" download>Download my Resume</a></i>
                                 </aside>
                         </article>  
                     </article>

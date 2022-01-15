@@ -61,6 +61,8 @@ const userdetails = {
             I will strive to keep myself update to emerging technology and pursue continuing development.`
         },
     ],
+    phone_number:"+614-1678-1287",
+    email:"mckinleyvj@gmail.com",
 };
 
 export default userdetails;

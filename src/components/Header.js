@@ -22,7 +22,7 @@ export default function Header({ userdetails }) {
                         <ul className="_no_transition">
                             <li className="_no_transition"><a className="_no_transition" href="#_top">Home</a></li>
                             <li className="_no_transition"><a className="_no_transition" href="#about-me">About</a></li>
-                            <li className="_no_transition"><a className="_no_transition" href="#my-work">Portfolios</a></li>
+                            <li className="_no_transition"><a className="_no_transition" href="#my-work">Portfolio</a></li>
                             <li className="_no_transition"><a className="_no_transition" href="#contact-me">Contact</a></li>
                         </ul>
                     </nav>
