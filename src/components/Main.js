@@ -34,7 +34,7 @@ export default function Main({ userdetails }) {
                                 <img src={public_images + userdetails.photo.name} alt={userdetails.photo.alt_text} title={userdetails.photo.title}/>
                             </figure>
                             <aside className="home-content-1">
-                                <span className="greet">Hi! I'm {userdetails.firstname}.</span>
+                                <span className="greet">Hi! I'm {userdetails.firstname} {userdetails.lastname}</span>
                                 <strong>{userdetails.curr_job}</strong>
                                 <span className="greet-desc">{userdetails.short_desc}</span>
                                 <div className="next"><a href="#about-me">&gt; More about me &gt;</a></div>

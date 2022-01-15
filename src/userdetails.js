@@ -2,14 +2,14 @@ const userdetails = {
     id : "1",
     title : "DEV_Mac //",
     firstname : "Mckinley",
-    lastname : "James",
+    lastname : "Jimenez",
     photo : {
         name : "Self-Portrait-BW.png",
         alt_text : "Self-Portrait of Mac",
         title : "Hi! This is me."
     },
     curr_job : "Technical Business Analyst/Full Stack Developer",
-    short_desc : `IT professional with wide range of skillsets. 8 years of industry experience incl. Software Dev. & Support, Upgrades & Migration + Hardware/Networks.`,
+    short_desc : `IT professional with wide range of skillsets. 8 years of industry experience including Software Dev. & Support, Upgrades & Migration + Hardware/Networks.`,
     prev_jobs : [
         {
             "date":"2011",
