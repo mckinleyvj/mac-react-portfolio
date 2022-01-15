@@ -13,23 +13,28 @@ const userdetails = {
     prev_jobs : [
         {
             "date":"2011",
-            "job":'Software Support Executive'
+            "job":'Software Support Executive',
+            "desc":"Entry-level graduate position. Started working as an IT support, providing remote & on-site support to clients related to hardware, software and networking issues."
         },
         {
             "date":"2011",
-            "job":"Systems Analyst"
+            "job":"Systems Analyst",
+            "desc":"Mid-level position where I started working more complex system support. Implemented projects to small to medium sized businesses."
         },
         {
             "date":"2013",
-            "job":"Technical Lead"
+            "job":"Technical Lead",
+            "desc":"Starting working on a technical lead role. Tasking projects, testing of system, rectifying complex issues, implementing projects to all business corporations & leading the technical roles of business systems for the company."
         },
         {
             "date":"2019",
-            "job":"Vehicle Detailer"
+            "job":"Vehicle Detailer",
+            "desc":"A quick temporary job just to sustain our move into Australia. Provided I was only allowed to work with limited hours, I did service car washes and detailing of used cars until I was placed as the lead detailer for BayFord Epping, Australia."
         },
         {
             "date":"2021",
-            "job":"Business Analyst/Web Developer"
+            "job":"Business Analyst/Web Developer",
+            "desc":"Currently working as a Technical Business Analyst for APM EmployableMe. Running tasks of creating user stories and grooming Acceptance Criterias, daily standups, stakeholder meetings, requirements analysis, scrum planning and testing. Also I am the first point of contact for customer service centre's technical issues for end-users."
         },
     ],
     linkedin_url : 'https://www.linkedin.com/in/mckinleyjimenez',
