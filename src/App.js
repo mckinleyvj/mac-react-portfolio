@@ -11,9 +11,9 @@ import userdetails from './userdetails';
 function App() {
   return (
     <>
-      <Header />
+      <Header userdetails={userdetails}/>
       <Main userdetails={userdetails}/>
-      <Footer />
+      <Footer userdetails={userdetails}/>
     </>
   );
 }

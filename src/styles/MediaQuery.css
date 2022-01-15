@@ -60,7 +60,7 @@ MEDIA QUERIES
 		font-size: calc(17px - 0.3vw);
 	}
 	.work-content-container figure {
-		width: 33.33%;
+		width: 30%;
 	}
 	.work-content-inner {
 		width: 100%;
@@ -161,7 +161,7 @@ MEDIA QUERIES
 		font-size: calc(15px - 0.3vw);
 	}
 	.work-content-container figure {
-		width: 50%;
+		width: 45%;
 	}
 	.fig-desc {
 		font-size: calc(15px - 0.3vw);
@@ -281,9 +281,13 @@ MEDIA QUERIES
 		font-size: 14px;
 		letter-spacing: 2px;
 	}
+	.home-content-1 .greet-desc {
+		font-size: calc(12px - 0.2vw);
+		width: 100%;
+	}
 	._card_container_inner_home {
 		flex-direction: column;
-		width: 100vw;
+		/* width: 100vw; */
 		/* height: 70vh; */
 		align-items: center;
 	}
@@ -305,6 +309,7 @@ MEDIA QUERIES
 		text-shadow: none;
 		font-weight: 900;
 		letter-spacing: 2px;
+		width: 100%;
 	}
 
 	.home-content-3 {

@@ -1,18 +1,35 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Global.css';
 import '../styles/Main.css';
+import moment from 'moment';
+
+import githubapi from '../utils/API';
 
 const public_images = process.env.PUBLIC_URL + `images/`;
+const image_ext = ".png";
 
 export default function Main({ userdetails }) {
-  return (
+
+    const [results, setResults] = useState([]);
+
+    const searchUserRepo = async (user) => {
+        const response = await githubapi(user);
+        setResults(response.data);
+      };
+
+    useEffect(() => {
+        searchUserRepo('mckinleyvj');
+      }, []);
+
+      return (
     <main className="_body_container" id="_top">
                 <section className="_body_container_inner_bg"></section>
                 <section className="_body_container_inner"> 
                     <article className="_card_container_home">
                         <article className="_card_container_inner_home">
                             <figure className="home-content-2">
-                                <img src={public_images + userdetails.photo} alt="Self-Portrait of Mac" title="Hi! This is me."/>
+                                <img src={public_images + userdetails.photo.name} alt={userdetails.photo.alt_text} title={userdetails.photo.title}/>
                             </figure>
                             <aside className="home-content-1">
                                 <span className="greet">Hi! I'm {userdetails.firstname}.</span>
@@ -34,42 +51,56 @@ export default function Main({ userdetails }) {
                     <article className="card-content" id="about-me">
                         <article className="card-content-inner">
                             <aside className="Storyline-A">
-                                <p className="paragraph-context">
-                                    My nickname is "Mac". Residing in Geelong, Australia.</p>
-                                <p className="paragraph-context">
-                                    I have a degree in Computing & Software Engineering with extensive knowledge in applications development. The core languages I used were Visual Basic, VB.Net, ASP.Net, HTML, CSS and SQL.</p>
-                                <p className="paragraph-context">
-                                    I started my career as an IT Support Specialist, accruing hours of IT managed services for corporate clients in <a href="https://en.wikipedia.org/wiki/Brunei" target="_blank">Brunei Darussalam</a>. The position provided me with the chance to deal with real-world situations while also honing my skills in working with a wide range of application systems, including but not limited to Accounting, Stock Inventory, HR, ERP, and POS. I had managed and led hundreds of projects over the years that includes system upgrades and migration, as well as software development.</p>
-                                <p className="paragraph-context">
-                                    I moved to Australia after 8 years for the purpose of a better life, but had difficulties due to visa work rights limitations. I worked as a Vehicle detailer for two years until my regional skilled visa was granted, providing full work rights to which gave me the opportunity to focus on rebuilding my career.</p> 
-                                <p className="paragraph-context"> 
-                                    I am currently enrolled in an online Full Stack Flex course by Monash University, Melbourne. The course is a game changer, it has all the resources that helped me land a promising career as a Business Analyst for a respective employer. My knowledge will continue to expand and I will strive to progress through continuing development.</p> 
+                            {userdetails.about_me.map((me) => (
+                            <p className="paragraph-context" key={me.desc}>
+                                {`${me.desc}`}
+                            </p>
+                            ))}
                             </aside>
                             <aside className="Storyline-B">
                                 <div className="next"><a href="#my-work">&gt; Career Achievements &gt;</a></div>
-                                <figure>
-                                    <img src="./assets/images/TBS.jpg" alt="TBS Solutions Logo" title="TBS Malaysia"/>
+                                {/* <figure>
+                                    <img src={public_images + "/TBS.jpg"} alt="TBS Solutions Logo" title="TBS Malaysia"/>
                                     <figcaption>TBS Software Systems</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="./assets/images/FVP.png" alt="Visual FoxPro Logo" title="Visual FoxPro"/>
+                                    <img src={public_images + "FVP.png"} alt="Visual FoxPro Logo" title="Visual FoxPro"/>
                                     <figcaption>Visual FoxPro</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="./assets/images/MySQL.png" alt="MySQL Logo" title="MySQL"/>
+                                    <img src={public_images + "MySQL.png"} alt="MySQL Logo" title="MySQL"/>
                                     <figcaption>MySQL DB Tools</figcaption>
                                 </figure>
                                 <figure>
-                                    <img src="./assets/images/C1.png" alt="ComponentOne Logo" title="ComponentOne Reports Designer"/>
+                                    <img src={public_images + "C1.png"} alt="ComponentOne Logo" title="ComponentOne Reports Designer"/>
                                     <figcaption>C1 Report Designer</figcaption>
-                                </figure>
+                                </figure> */}
                             </aside>
                         </article>  
                     </article>
                     <article className="card-content" id="my-work">
                         <article className="work-content-inner">
-                            <h2>Monash BootCamp Web Dev. - Repositories</h2>
+                            <h2>Portfolio</h2>
                             <aside id="work-content-container" className="work-content-container">
+                            {results.map((repos) => {
+                                const date_updtd = moment.parseZone(repos.updated_at,"YYYY-MM-DDTHH:mm:ss[Z]").format("dddd, DD-MM-YYYY, HH:mm:ss");
+                                (
+                            <figure key={repos.id}>
+                            <a href={repos.html_url} className="fig-container" >
+                            <figcaption id="#fig-glow">Repository: {repos.name}</figcaption>
+                            <img src={public_images + repos.name + image_ext} alt={repos.name}/>
+                            <div className="flex-fig-table">
+                            <div className="fig-table">
+                            <span className="fig-desc">Description:<br/>
+                            {repos.description}</span>
+                            <span className="fig-desc">Language: {repos.language}</span>
+                            <span className="fig-desc">Last update: {repos.date_updtd}</span>
+                            {/* <span className="fig-desc">Live URL: <a href="https://{repos.owner.login}.github.io/{repos.name}" className="fig-desc" target="_blank">https://{repos.owner.login}.github.io/{repos.name}</a></span> */}
+                            </div>
+                            </div>
+                            </a>
+                            </figure>
+                            )})}
                             </aside>
                             <h2>Systems Analyst - Previous Overseas Employment</h2>
                             <aside id="work-content-container" className="work-content-container">
