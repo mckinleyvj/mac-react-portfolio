@@ -6,8 +6,8 @@ import moment from 'moment';
 
 import githubapi from '../utils/API';
 
-const public_images = process.env.PUBLIC_URL + `images/`;
-const public_docs = process.env.PUBLIC_URL + `docs/`;
+const public_images = process.env.PUBLIC_URL + `/images/`;
+const public_docs = process.env.PUBLIC_URL + `/docs/`;
 
 const image_ext = ".png";
 
