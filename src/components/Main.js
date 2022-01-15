@@ -34,7 +34,7 @@ export default function Main({ userdetails }) {
                                 <img src={public_images + userdetails.photo.name} alt={userdetails.photo.alt_text} title={userdetails.photo.title}/>
                             </figure>
                             <aside className="home-content-1">
-                                <span className="greet">Hi! I'm {userdetails.firstname} {userdetails.lastname}</span>
+                                <span className="greet">Hi! I'm {userdetails.firstname} {userdetails.lastname.charAt(0).toUpperCase()}</span>
                                 <strong>{userdetails.curr_job}</strong>
                                 <span className="greet-desc">{userdetails.short_desc}</span>
                                 <div className="next"><a href="#about-me">&gt; More about me &gt;</a></div>
@@ -89,7 +89,7 @@ export default function Main({ userdetails }) {
                             <figure key={repos.id}>
                             <a href={repos.html_url} className="fig-container" >
                             <figcaption id="#fig-glow">REPOSITORY: {repos.name.toUpperCase()}</figcaption>
-                            <img src={public_images + repos.name + image_ext} alt={repos.name}/>
+                            <img src={public_images + repos.name.toLowerCase() + image_ext.toLowerCase()} alt={repos.name}/>
                             <div className="flex-fig-table">
                             <div className="fig-table">
                             <span className="fig-desc">Description:<br/>
