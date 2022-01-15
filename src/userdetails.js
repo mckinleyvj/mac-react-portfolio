@@ -63,6 +63,7 @@ const userdetails = {
     ],
     phone_number:"+614-1678-1287",
     email:"mckinleyvj@gmail.com",
+    portfolio_desc: `These are my 6 recent Github repositories. It will be enhanced in the near future to display repositories with the most commits and publishes.`
 };
 
 export default userdetails;

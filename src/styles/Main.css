@@ -19,7 +19,6 @@ BODY - HOME SECTION
 }
 
 ._card_container_home {
-	/* margin: 0 auto; */
 	align-items: center;
 }
 
@@ -74,7 +73,6 @@ BODY - HOME SECTION
 }
 
 .next a:hover {
-	/* text-decoration-style: dotted; */
 	text-decoration: underline;
 	text-decoration-color: var(--orange);
 	color: var(--orange);
@@ -111,7 +109,6 @@ BODY - HOME SECTION
 
 ._card_container_inner_home {
 	display: flex;
-	/* flex: 1 1 auto; */
 	flex-wrap: nowrap;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -122,7 +119,6 @@ BODY - HOME SECTION
 
 .home-content-3 {
 	display: flex;
-	/* min-height: 51vh; */
 	margin-left: 150px;
 }
 
@@ -205,7 +201,6 @@ BODY - HOME SECTION
 /*----------------------------------
 BODY - GLOBAL BODY SECTION
 ------------------------------------*/
-
 .card-content {
 	display: flex;
 	flex: 1 0 auto;
@@ -284,7 +279,6 @@ BODY - GLOBAL BODY SECTION
 /*----------------------------------
 BODY - WORK SECTION
 ------------------------------------*/
-
 .work-content-inner {
 	width: 85%;
 	display: flex;
@@ -298,21 +292,15 @@ BODY - WORK SECTION
 .work-content-inner h2 {
 	font-size: 22px;
 	text-align: center;
-	/* border-bottom: 1px solid var(--alittle_black); */
 	margin: 0 15px;
 	text-shadow: 0 0 2px black;
 	letter-spacing: 2px;
 }
 
 .work-content-container figcaption {
-	/* color: var(--dirtywhite); */
-	/* text-align: left; */
 	position: relative;
 	z-index: 50;
 	font-weight: 900;
-	/* margin-bottom: 5px;
-	margin-left: 10px; */
-	/* background-color: rgb(0 0 0 / 70%); */
 	padding: 10px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -320,6 +308,7 @@ BODY - WORK SECTION
 	font-size: 17px;
 	width: 100%;
 	color: var(--orange);
+	text-shadow: 0 0 2px black;
 }
 
 .work-content-container {
@@ -353,9 +342,6 @@ BODY - WORK SECTION
 
 .work-content-container img {
 	min-height: 225px;
-	/* border-radius: 15px; */
-	/* border: 2px solid var(--super_black); */
-	/* padding: 5px; */
 	width: 100%;
 }
 
@@ -376,7 +362,6 @@ BODY - WORK SECTION
 .fig-container {
 	display: flex;
 	flex-direction: column;
-	/* border: 2px solid var(--super_black); */
 	border-radius: 15px;
 	text-decoration: none;
 }
@@ -385,10 +370,8 @@ BODY - WORK SECTION
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
-	/* border-radius: 15px; */
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	/* margin-top: 2px; */
 	background-color: rgb(0 0 0 / 70%);
 	width: 100%;
 	flex: 1 auto;

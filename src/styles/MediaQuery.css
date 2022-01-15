@@ -59,9 +59,6 @@ MEDIA QUERIES
 	.work-content-container figcaption {
 		font-size: calc(17px - 0.3vw);
 	}
-	/* .work-content-container figure {
-		width: 20%;
-	} */
 	.work-content-inner {
 		width: 100%;
 	}
@@ -290,8 +287,6 @@ MEDIA QUERIES
 	}
 	._card_container_inner_home {
 		flex-direction: column;
-		/* width: 100vw; */
-		/* height: 70vh; */
 		align-items: center;
 	}
 

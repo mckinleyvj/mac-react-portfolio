@@ -141,7 +141,7 @@ export default function Main({ userdetails }) {
                                     <div className="fig-table"><span className="fig-desc">IT Support: Visual Foxpro, Visual Basic, HTML, CSS, ASP.Net, VBScript, XML, SQL</span></div>
                                 </figure> 
                             </aside> */}
-                            <div className="work-content-footer"><span>*Images are copyright and have been originally taken throughout my career.</span></div>
+                            <div className="work-content-footer"><span>{userdetails.portfolio_desc}</span></div>
                                 <div className="next"><a href="#contact-me">&gt; Get in touch &gt;</a>
                                 </div>
                         </article>  
