@@ -150,7 +150,7 @@ export default function Main({ userdetails }) {
                         <article className="contact-content-inner">
                                 <aside>
                                     <h3>Contact Details:</h3>
-                                    <p>Phone: +61-416781287</p>
+                                    <p>Phone: {userdetails.phone_number}</p>
                                     <p>Email: <a href={'mailto:' + userdetails.email} className="download-resume">{userdetails.email}</a></p>
                                     <i className="fa fa-file-text"><a href={public_docs + '/Resume-MckinleyJimenez.pdf'} className="download-resume" download>Download my Resume</a></i>
                                 </aside>
