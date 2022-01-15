@@ -1,0 +1,13 @@
+/*----------------------------------
+FOOTER
+------------------------------------*/
+footer {
+	text-align: right;
+	position: fixed;
+	bottom: 5px;
+	font-size: small;
+	width: 100%;
+	z-index: -100;
+	color: var(--dirtywhite);
+	right: 5px;
+}

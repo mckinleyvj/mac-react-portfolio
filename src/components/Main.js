@@ -4,12 +4,7 @@ import '../styles/Main.css';
 
 const public_images = process.env.PUBLIC_URL + `images/`;
 
-const usr_greet = "Hi! I'm Mckinley.";
-const usr_curr_job = "Business Analyst/Full Stack Developer";
-const usr_short_desc = `IT professional with wide range of skillsets. 8 years of industry experience incl. Software Dev. & Support, Upgrades & Migration + Hardware/Networks.`;
-const usr_job1 = '';
-
-function Main() {
+export default function Main({ userdetails }) {
   return (
     <main className="_body_container" id="_top">
                 <section className="_body_container_inner_bg"></section>
@@ -17,16 +12,16 @@ function Main() {
                     <article className="_card_container_home">
                         <article className="_card_container_inner_home">
                             <figure className="home-content-2">
-                                <img src={public_images + 'Self-Portrait-BW.png'} alt="Self-Portrait of Mac" title="Hi! This is me."/>
+                                <img src={public_images + userdetails.photo} alt="Self-Portrait of Mac" title="Hi! This is me."/>
                             </figure>
                             <aside className="home-content-1">
-                                <span className="greet">{usr_greet}</span>
-                                <strong>{usr_curr_job}</strong>
-                                <span className="greet-desc">{usr_short_desc}</span>
+                                <span className="greet">Hi! I'm {userdetails.firstname}.</span>
+                                <strong>{userdetails.curr_job}</strong>
+                                <span className="greet-desc">{userdetails.short_desc}</span>
                                 <div className="next"><a href="#about-me">&gt; More about me &gt;</a></div>
                             </aside>
                         </article>  
-                        <aside className="home-content-3">
+                        {/* <aside className="home-content-3">
                             <ul className="timeline">
                                 <li data-year="2011" data-text="Software Support Executive"></li>
                                 <li data-year="2013" data-text="Systems Analyst"></li>
@@ -34,7 +29,7 @@ function Main() {
                                 <li data-year="2019" data-text="Vehicle Detailer"></li>
                                 <li data-year="2021" data-text="Business Analyst/Web Developer"></li>
                             </ul>
-                        </aside>
+                        </aside> */}
                     </article>
                     <article className="card-content" id="about-me">
                         <article className="card-content-inner">
@@ -133,5 +128,3 @@ function Main() {
         </main>
   );
 }
-
-export default Main;

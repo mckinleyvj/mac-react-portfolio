@@ -3,14 +3,17 @@ import './styles/Reset.css';
 import './styles/Global.css';
 import Header from "./components/Header";
 import Main from "./components/Main";
-// import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import './styles/MediaQuery.css';
+
+import userdetails from './userdetails';
 
 function App() {
   return (
     <>
       <Header />
-      <Main />
-      {/* <Section /> */}
+      <Main userdetails={userdetails}/>
+      <Footer />
     </>
   );
 }
