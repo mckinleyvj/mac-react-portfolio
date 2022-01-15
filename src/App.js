@@ -1,15 +1,17 @@
 import React from "react";
+import './styles/Reset.css';
+import './styles/Global.css';
 import Header from "./components/Header";
-import Section from "./components/Section";
-import Navbar from "./components/Navbar";
+import Main from "./components/Main";
+// import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    <>
       <Header />
-      <Section />
-    </div>
+      <Main />
+      {/* <Section /> */}
+    </>
   );
 }
 
