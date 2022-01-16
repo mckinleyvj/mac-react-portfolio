@@ -388,6 +388,7 @@ BODY - WORK SECTION
 }
 
 .work-content-container-2 img {
+	max-height: 225px;
 	min-height: 225px;
 	width: 100%;
 }
