@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/mac-react-portfolio/static/css/main.5624f4d4.css",
-    "main.js": "/mac-react-portfolio/static/js/main.7ccc4745.js",
+    "main.css": "/mac-react-portfolio/static/css/main.cd6788e9.css",
+    "main.js": "/mac-react-portfolio/static/js/main.3f6e702d.js",
     "index.html": "/mac-react-portfolio/index.html",
-    "main.5624f4d4.css.map": "/mac-react-portfolio/static/css/main.5624f4d4.css.map",
-    "main.7ccc4745.js.map": "/mac-react-portfolio/static/js/main.7ccc4745.js.map"
+    "main.cd6788e9.css.map": "/mac-react-portfolio/static/css/main.cd6788e9.css.map",
+    "main.3f6e702d.js.map": "/mac-react-portfolio/static/js/main.3f6e702d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5624f4d4.css",
-    "static/js/main.7ccc4745.js"
+    "static/css/main.cd6788e9.css",
+    "static/js/main.3f6e702d.js"
   ]
 }
