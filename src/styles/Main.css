@@ -428,11 +428,8 @@ BODY - WORK SECTION
 }
 
 .fig-desc {
-	/* position: relative; */
 	text-align: center;
-	/* width: 100%; */
-	/* align-self: center; */
-	font-size: 17px;
+	font-size: 16px;
 	padding: 5px 0;
 	color: var(--dirtywhite);
 	display: flex;
@@ -454,6 +451,10 @@ BODY - WORK SECTION
 	align-items: center;
 	width: 100%;
 	justify-content: center;
+}
+
+.work-content-footer span {
+	text-align: center;
 }
 
 /*----------------------------------

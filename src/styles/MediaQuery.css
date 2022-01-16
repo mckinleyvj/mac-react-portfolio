@@ -96,6 +96,7 @@ MEDIA QUERIES
 	}
 	.work-content-footer span {
 		font-size: calc(18px - 0.3vw);
+		text-align: center;
 	}
 }
 /*--------Media of 1280px x 960px----------*/

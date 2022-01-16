@@ -6,18 +6,22 @@ import '../styles/Main.css';
 
 import githubapi from '../utils/API';
 
-export default function Main({ userdetails, public_images, public_docs, image_ext }) {
+export default function Main({ userdetails, gitUsrname, public_images, public_docs, image_ext }) {
 
     const [results, setResults] = useState([]);
 
     const searchUserRepo = async (user) => {
-        const response = await githubapi(user);
-        setResults(response.data);
-      };
+        try {
+            const response = await githubapi(user);
+            setResults(response.data);
+        } catch (e) {
+            console.log(e);
+        }
+    };
 
     useEffect(() => {
-        searchUserRepo(userdetails.github_username);
-      }, []);
+        searchUserRepo(gitUsrname);
+      }, [gitUsrname]);
 
       return (
     <main className="_body_container" id="_top">
@@ -67,8 +71,6 @@ export default function Main({ userdetails, public_images, public_docs, image_ex
                                         Language:    
                                         <span className="fig-lang">{repos.language}</span>
                                         </div>
-                                    {/* <span className="fig-desc">Last update: {repos.date_updtd}</span> */}
-                                    {/* <span className="fig-desc">Live URL: <a href="https://{repos.owner.login}.github.io/{repos.name}" className="fig-desc" target="_blank">https://{repos.owner.login}.github.io/{repos.name}</a></span> */}
                                     </div>
                                     </a>
                                     </figure>

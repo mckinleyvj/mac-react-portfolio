@@ -66,7 +66,7 @@ const userdetails = {
             I will strive to keep myself update to emerging technology and pursue continuing development.`
         },
     ],
-    phone_number:"+614-1678-1287",
+    phone_number:"+61-(4)-1678-1287",
     email:"mckinleyvj@gmail.com",
     github_username: "mckinleyvj",
     portfolio_desc: `These are my 6 recent Github repositories. It will be enhanced in the near future to display repositories with the most commits and publishes.
