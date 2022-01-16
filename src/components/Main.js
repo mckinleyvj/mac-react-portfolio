@@ -2,16 +2,11 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import '../styles/Global.css';
 import '../styles/Main.css';
-import moment from 'moment';
+// import moment from 'moment';
 
 import githubapi from '../utils/API';
 
-const public_images = process.env.PUBLIC_URL + `/images/`;
-const public_docs = process.env.PUBLIC_URL + `/docs/`;
-
-const image_ext = ".png" || ".PNG" || ".Png";
-
-export default function Main({ userdetails }) {
+export default function Main({ userdetails, public_images, public_docs, image_ext }) {
 
     const [results, setResults] = useState([]);
 
@@ -86,23 +81,35 @@ export default function Main({ userdetails }) {
                             <aside id="work-content-container" className="work-content-container">
                             {results.map((repos) => 
                                 (
-                            <figure key={repos.id}>
-                            <a href={repos.html_url} className="fig-container" >
-                            <figcaption id="#fig-glow">REPOSITORY: {repos.name.toUpperCase()}</figcaption>
-                            <img src={public_images + repos.name.toLowerCase() + image_ext.toLowerCase()} alt={repos.name}/>
-                            <div className="flex-fig-table">
-                            <div className="fig-table">
-                            <span className="fig-desc">Description:<br/>
-                            {repos.description}</span>
-                            <span className="fig-desc">Language: {repos.language}</span>
-                            {/* <span className="fig-desc">Last update: {repos.date_updtd}</span> */}
-                            {/* <span className="fig-desc">Live URL: <a href="https://{repos.owner.login}.github.io/{repos.name}" className="fig-desc" target="_blank">https://{repos.owner.login}.github.io/{repos.name}</a></span> */}
-                            </div>
-                            </div>
-                            </a>
-                            </figure>
-                            ))}
+                                    <figure key={repos.id}>
+                                    <a href={repos.html_url} className="fig-container" >
+                                    <figcaption id="#fig-glow">REPOSITORY: {repos.name.toUpperCase()}</figcaption>
+                                    <img src={public_images + repos.name.toLowerCase() + image_ext.toLowerCase()} alt={repos.name}/>
+                                    <div className="flex-fig-table">
+                                        <div className="fig-table">Description:
+                                        <span className="fig-desc">{repos.description}</span>
+                                        <br/>
+                                        Language:    
+                                        <span className="fig-lang">{repos.language}</span>
+                                        </div>
+                                    {/* <span className="fig-desc">Last update: {repos.date_updtd}</span> */}
+                                    {/* <span className="fig-desc">Live URL: <a href="https://{repos.owner.login}.github.io/{repos.name}" className="fig-desc" target="_blank">https://{repos.owner.login}.github.io/{repos.name}</a></span> */}
+                                    </div>
+                                    </a>
+                                    </figure>
+                                ))}
                             </aside>
+                            <hr/>
+                            <aside id="work-content-container" className="work-content-container-2">
+                            {userdetails.prev_jobs.map((prevJ) => 
+                                (
+                                        <figure key={prevJ.job}>
+                                            <figcaption id="#fig-glow">{prevJ.job.toUpperCase()}</figcaption>
+                                            <img src={public_images + prevJ.job + image_ext.toLowerCase()} alt={prevJ.job}/>
+                                            <div className="fig-table"><span className="fig-desc">{prevJ.desc}</span></div>
+                                        </figure>
+                                 ))}
+                                 </aside>
                             {/* <h2>Systems Analyst - Previous Overseas Employment</h2>
                             <aside id="work-content-container" className="work-content-container">
                                 <figure>

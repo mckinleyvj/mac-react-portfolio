@@ -59,12 +59,27 @@ MEDIA QUERIES
 	.work-content-container figcaption {
 		font-size: calc(17px - 0.3vw);
 	}
+
+	.work-content-container-2 {
+		margin: 0;
+	}
+	.work-content-container-2 figcaption {
+		font-size: calc(17px - 0.3vw);
+	}
+
 	.work-content-inner {
 		width: 100%;
 	}
 	.fig-desc {
 		font-size: calc(17px - 0.3vw);
 	}
+	.fig-lang {
+		font-size: calc(17px - 0.3vw);
+	}
+	.fig-table {
+		font-size: calc(17px - 0.3vw);
+	}
+
 	.contact-content-inner {
 		display: flex;
 		justify-content: center;
@@ -91,6 +106,9 @@ MEDIA QUERIES
 		margin-left: 25px;
 	}
 	.work-content-container figure {
+		width: 35%;
+	}
+	.work-content-container-2 figure {
 		width: 35%;
 	}
 }
@@ -163,6 +181,15 @@ MEDIA QUERIES
 	.work-content-container figure {
 		width: 40%;
 	}
+	.work-content-container-2 {
+		margin: 0;
+	}
+	.work-content-container-2 figcaption {
+		font-size: calc(15px - 0.3vw);
+	}
+	.work-content-container-2 figure {
+		width: 40%;
+	}
 	.fig-desc {
 		font-size: calc(15px - 0.3vw);
 	}
@@ -218,9 +245,19 @@ MEDIA QUERIES
 	.work-content-container figcaption {
 		font-size: calc(12px - 0.3vw);
 	}
+	.work-content-container-2 figcaption {
+		font-size: calc(12px - 0.3vw);
+	}
 	.fig-desc {
 		font-size: calc(12px - 0.3vw);
 	}
+	.fig-table {
+		font-size: calc(12px - 0.3vw);
+	}
+	.fig-lang {
+		font-size: calc(12px - 0.3vw);
+	}
+
 	.work-content-footer span {
 		font-size: calc(12px - 0.3vw);
 	}
@@ -372,11 +409,22 @@ MEDIA QUERIES
 	.work-content-container figure {
 		width: 100vw;
 	}
-	.work-content-inner {
-		display: block;
-	}
 	.work-content-container img {
 		opacity: 1;
+	}
+
+	.work-content-container-2 {
+		flex-direction: column;
+	}
+	.work-content-container-2 figure {
+		width: 100vw;
+	}
+	.work-content-container-2 img {
+		opacity: 1;
+	}
+
+	.work-content-inner {
+		display: block;
 	}
 
 	._header_inner_container_1 {
