@@ -8,11 +8,10 @@ import './styles/MediaQuery.css';
 
 import userdetails from './userdetails';
 
-
 const public_images = process.env.PUBLIC_URL + `/images/`;
 const public_docs = process.env.PUBLIC_URL + `/docs/`;
 
-const image_ext = ".png" || ".PNG" || ".Png" || ".jpg" || ".jpeg" || ".JPG" || ".JPEG";
+const image_ext = ".png"; //have to ensure when importing images, rename extensions to .png. Will work on accepting different formats in the future.
 
 function App() {
   return (

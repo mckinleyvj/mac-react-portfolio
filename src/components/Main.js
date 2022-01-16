@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import '../styles/Global.css';
 import '../styles/Main.css';
-import moment from 'moment';
+// import moment from 'moment';
 
 import githubapi from '../utils/API';
 
@@ -86,28 +86,30 @@ export default function Main({ userdetails, public_images, public_docs, image_ex
                                     <figcaption id="#fig-glow">REPOSITORY: {repos.name.toUpperCase()}</figcaption>
                                     <img src={public_images + repos.name.toLowerCase() + image_ext.toLowerCase()} alt={repos.name}/>
                                     <div className="flex-fig-table">
-                                    <div className="fig-table">
-                                    <span className="fig-desc">Description:<br/>
-                                    {repos.description}</span>
-                                    <span className="fig-desc">Language: {repos.language}</span>
+                                        <div className="fig-table">Description:
+                                        <span className="fig-desc">{repos.description}</span>
+                                        <br/>
+                                        Language:    
+                                        <span className="fig-lang">{repos.language}</span>
+                                        </div>
                                     {/* <span className="fig-desc">Last update: {repos.date_updtd}</span> */}
                                     {/* <span className="fig-desc">Live URL: <a href="https://{repos.owner.login}.github.io/{repos.name}" className="fig-desc" target="_blank">https://{repos.owner.login}.github.io/{repos.name}</a></span> */}
-                                    </div>
                                     </div>
                                     </a>
                                     </figure>
                                 ))}
                             </aside>
+                            <hr/>
+                            <aside id="work-content-container" className="work-content-container-2">
                             {userdetails.prev_jobs.map((prevJ) => 
                                 (
-                                    <aside id="work-content-container" className="work-content-container" key={prevJ.job}>
-                                        <figure>
-                                            <figcaption id="#fig-glow">{prevJ.job}</figcaption>
-                                            <img src={prevJ + prevJ.job + image_ext.toLowerCase()} alt={prevJ.job}/>
+                                        <figure key={prevJ.job}>
+                                            <figcaption id="#fig-glow">{prevJ.job.toUpperCase()}</figcaption>
+                                            <img src={public_images + prevJ.job + image_ext.toLowerCase()} alt={prevJ.job}/>
                                             <div className="fig-table"><span className="fig-desc">{prevJ.desc}</span></div>
                                         </figure>
-                                    </aside>
                                  ))}
+                                 </aside>
                             {/* <h2>Systems Analyst - Previous Overseas Employment</h2>
                             <aside id="work-content-container" className="work-content-container">
                                 <figure>
