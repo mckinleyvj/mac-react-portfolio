@@ -1,6 +1,7 @@
 const userdetails = {
     id : "1",
     title : "DEV_Mac //",
+    industry_type: "IT",
     firstname : "Mckinley",
     lastname : "Jimenez",
     photo : {
