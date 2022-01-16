@@ -390,6 +390,11 @@ MEDIA QUERIES
 		text-align: center;
 	}
 
+	.work-content-footer {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
 	.card-content {
 		padding: 50px 0px 0px 0px;
 	}
@@ -407,7 +412,7 @@ MEDIA QUERIES
 		flex-direction: column;
 	}
 	.work-content-container figure {
-		width: 100vw;
+		width: 98vw;
 	}
 	.work-content-container img {
 		opacity: 1;
@@ -417,7 +422,7 @@ MEDIA QUERIES
 		flex-direction: column;
 	}
 	.work-content-container-2 figure {
-		width: 100vw;
+		width: 98vw;
 	}
 	.work-content-container-2 img {
 		opacity: 1;

@@ -344,6 +344,8 @@ BODY - WORK SECTION
 	min-height: 225px;
 	max-height: 225px;
 	width: 100%;
+	border-radius: 15px;
+	padding-bottom: 5px;
 }
 
 .work-content-container img:hover {
@@ -391,6 +393,8 @@ BODY - WORK SECTION
 	max-height: 225px;
 	min-height: 225px;
 	width: 100%;
+	border-radius: 15px;
+	padding-bottom: 5px;
 }
 
 .work-content-container-2 figure:hover {
@@ -446,9 +450,10 @@ BODY - WORK SECTION
 
 .work-content-footer {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	width: 100%;
+	justify-content: center;
 }
 
 /*----------------------------------

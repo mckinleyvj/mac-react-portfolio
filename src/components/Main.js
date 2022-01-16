@@ -16,7 +16,7 @@ export default function Main({ userdetails, public_images, public_docs, image_ex
       };
 
     useEffect(() => {
-        searchUserRepo('mckinleyvj');
+        searchUserRepo(userdetails.github_username);
       }, []);
 
       return (
@@ -34,16 +34,7 @@ export default function Main({ userdetails, public_images, public_docs, image_ex
                                 <span className="greet-desc">{userdetails.short_desc}</span>
                                 <div className="next"><a href="#about-me">&gt; More about me &gt;</a></div>
                             </aside>
-                        </article>  
-                        {/* <aside className="home-content-3">
-                            <ul className="timeline">
-                                <li data-year="2011" data-text="Software Support Executive"></li>
-                                <li data-year="2013" data-text="Systems Analyst"></li>
-                                <li data-year="2016" data-text="Technical Lead"></li>
-                                <li data-year="2019" data-text="Vehicle Detailer"></li>
-                                <li data-year="2021" data-text="Business Analyst/Web Developer"></li>
-                            </ul>
-                        </aside> */}
+                        </article>
                     </article>
                     <article className="card-content" id="about-me">
                         <article className="card-content-inner">
@@ -56,22 +47,6 @@ export default function Main({ userdetails, public_images, public_docs, image_ex
                             </aside>
                             <aside className="Storyline-B">
                                 <div className="next"><a href="#my-work">&gt; Career Achievements &gt;</a></div>
-                                {/* <figure>
-                                    <img src={public_images + "/TBS.jpg"} alt="TBS Solutions Logo" title="TBS Malaysia"/>
-                                    <figcaption>TBS Software Systems</figcaption>
-                                </figure>
-                                <figure>
-                                    <img src={public_images + "FVP.png"} alt="Visual FoxPro Logo" title="Visual FoxPro"/>
-                                    <figcaption>Visual FoxPro</figcaption>
-                                </figure>
-                                <figure>
-                                    <img src={public_images + "MySQL.png"} alt="MySQL Logo" title="MySQL"/>
-                                    <figcaption>MySQL DB Tools</figcaption>
-                                </figure>
-                                <figure>
-                                    <img src={public_images + "C1.png"} alt="ComponentOne Logo" title="ComponentOne Reports Designer"/>
-                                    <figcaption>C1 Report Designer</figcaption>
-                                </figure> */}
                             </aside>
                         </article>  
                     </article>
@@ -110,44 +85,6 @@ export default function Main({ userdetails, public_images, public_docs, image_ex
                                         </figure>
                                  ))}
                                  </aside>
-                            {/* <h2>Systems Analyst - Previous Overseas Employment</h2>
-                            <aside id="work-content-container" className="work-content-container">
-                                <figure>
-                                    <figcaption id="#fig-glow">Server/Desktop Repairs</figcaption>
-                                    <img src="./assets/images/Work1.jpeg" alt="Typical Work Day 1"/>
-                                    <div className="fig-table"><span className="fig-desc">IT Support: Hardware Troubleshooting, Installation/Configuration of internal modular components</span></div>
-                                </figure>
-
-                                <figure>
-                                    <figcaption id="#fig-glow">System Testing</figcaption>
-                                    <img src="./assets/images/Work2.jpeg" alt="Typical Work Day 2"/>
-                                    <div className="fig-table"><span className="fig-desc">IT Support: Accounting, Stock Inventory, Point of Sales, ERP, Payroll and other management softwares</span></div>
-                                </figure>
-
-                                <figure>
-                                    <figcaption id="#fig-glow">System Upgrade/Migration</figcaption>
-                                    <img src="./assets/images/Work3.jpeg" alt="Typical Work Day 3"/>
-                                    <div className="fig-table"><span className="fig-desc">IT Support: Client projects implementing of system upgrades and data migration</span></div>
-                                </figure>
-
-                                <figure>
-                                    <figcaption id="#fig-glow">System Support</figcaption>
-                                <img src="./assets/images/Work4.jpeg" alt="Typical Work Day 4"/>
-                                <div className="fig-table"><span className="fig-desc">IT Support: Routine housekeeping jobs, numeric file deletion, backup file integrity and hardware device checks</span></div>
-                                </figure>
-
-                                <figure>
-                                    <figcaption id="#fig-glow">Operating Systems</figcaption>
-                                    <img src="./assets/images/Work5.jpeg" alt="Typical Work Day 5"/>
-                                    <div className="fig-table"><span className="fig-desc">IT Support: Fresh Installation, Reinstallation, Recovery, Ghosting of Windows Desktop/Server Operating Systems</span></div>
-                                </figure>
-
-                                <figure>
-                                    <figcaption id="#fig-glow">Coding</figcaption>
-                                    <img src="./assets/images/Work6.jpeg" alt="Typical Work Day 6"/>
-                                    <div className="fig-table"><span className="fig-desc">IT Support: Visual Foxpro, Visual Basic, HTML, CSS, ASP.Net, VBScript, XML, SQL</span></div>
-                                </figure> 
-                            </aside> */}
                             <div className="work-content-footer"><span>{userdetails.portfolio_desc}</span></div>
                                 <div className="next"><a href="#contact-me">&gt; Get in touch &gt;</a>
                                 </div>
