@@ -15,4 +15,4 @@ Ideas:
 Future Enhancements:
 
 -   Employer registration and Job posting enabled.
--   Candidate enquiries and connection requests.
+-   Candidate enquiries and connection requests..
