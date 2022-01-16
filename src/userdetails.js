@@ -35,7 +35,7 @@ const userdetails = {
         {
             "date":"2021",
             "job":"Technical Business Analyst",
-            "desc":"Currently working as a Technical Business Analyst for APM EmployableMe. Running tasks of creating user stories and grooming Acceptance Criterias, daily standups, stakeholder meetings, requirements analysis, scrum planning and testing. Also I am the first point of contact for customer service centre's technical issues for end-users."
+            "desc":"Currently working as a Technical Business Analyst. Running tasks of creating user stories and grooming Acceptance Criterias, attend daily standups, stakeholder meetings, requirements analysis, scrum planning and testing. Also I am the first point of contact for customer service centre's technical issues for end-users."
         },
     ],
     linkedin_url : 'https://www.linkedin.com/in/mckinleyjimenez',
