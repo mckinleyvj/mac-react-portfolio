@@ -21,7 +21,7 @@ export default function Main({ userdetails, gitUsrname, public_images, public_do
 
     useEffect(() => {
         searchUserRepo(gitUsrname);
-      }, [gitUsrname]);
+      },[gitUsrname]);
 
       return (
     <main className="_body_container" id="_top">
