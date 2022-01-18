@@ -95,6 +95,21 @@ BODY - HOME SECTION
 	opacity: 1;
 	transform: rotate(0deg);
 }
+/* 
+@media (prefers-reduced-motion: no-preference) {
+	.home-content-2 img {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+} */
 
 ._card_container_home {
 	display: flex;
